@@ -1,0 +1,255 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "profile": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "object",
+          "properties": {
+            "given": {
+              "type": "string"
+            },
+            "family": {
+              "type": "string"
+            },
+            "middle": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "given",
+            "family",
+            "middle"
+          ]
+        },
+        "dob": {
+          "type": "object",
+          "properties": {
+            "day": {
+              "type": "integer"
+            },
+            "month": {
+              "type": "integer"
+            },
+            "year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "day",
+            "month",
+            "year"
+          ]
+        },
+        "contact": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "value"
+            ]
+          }
+        }
+      },
+      "required": [
+        "name",
+        "dob",
+        "contact"
+      ]
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "institution": {
+            "type": "string"
+          },
+          "address": {
+            "type": "object",
+            "properties": {}
+          },
+          "qualifications": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "grade": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "object",
+                  "properties": {
+                    "day": {
+                      "type": "integer"
+                    },
+                    "month": {
+                      "type": "integer"
+                    },
+                    "year": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "day",
+                    "month",
+                    "year"
+                  ]
+                }
+              },
+              "required": [
+                "title",
+                "grade",
+                "date"
+              ]
+            }
+          }
+        },
+        "required": [
+          "institution",
+          "address",
+          "qualifications"
+        ]
+      }
+    },
+    "work": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "organisation": {
+            "type": "string"
+          },
+          "dates": {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "object",
+                "properties": {
+                  "day": {
+                    "type": "integer"
+                  },
+                  "month": {
+                    "type": "integer"
+                  },
+                  "year": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "day",
+                  "month",
+                  "year"
+                ]
+              },
+              "end": {
+                "type": "object",
+                "properties": {
+                  "day": {
+                    "type": "integer"
+                  },
+                  "month": {
+                    "type": "integer"
+                  },
+                  "year": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "day",
+                  "month",
+                  "year"
+                ]
+              }
+            },
+            "required": [
+              "start",
+              "end"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "responsilibites": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "description"
+              ]
+            }
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "integration": {
+                  "type": "integer"
+                },
+                "proficentcy": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "name",
+                "type",
+                "description",
+                "integration",
+                "proficentcy"
+              ]
+            }
+          }
+        },
+        "required": [
+          "organisation",
+          "dates",
+          "title",
+          "description",
+          "responsilibites",
+          "skills"
+        ]
+      }
+    }
+  },
+  "required": [
+    "profile",
+    "education",
+    "work"
+  ]
+}

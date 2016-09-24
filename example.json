@@ -1,0 +1,75 @@
+{
+  "profile": {
+    "name": {
+      "given": "John",
+      "family": "Doe",
+      "middle": "Anthony"
+    },
+    "dob": {
+      "day": 1,
+      "month": 1,
+      "year": 1981
+    },
+    "contact": [
+      {
+        "type": "email",
+        "value": "john.doe@gmail.com"
+      },
+      {
+        "type": "tel",
+        "value": "07500000000"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Nice Big School",
+      "address": {},
+      "qualifications": [
+        {
+          "title": "GCSE Maths",
+          "grade": "A",
+          "date": {
+            "day": 1,
+            "month": 7,
+            "year": 1997
+          }
+        }
+      ]
+    }
+  ],
+  "work": [
+    {
+      "organisation": "Acme Widgets",
+      "dates": {
+        "start": {
+          "day": 1,
+          "month": 7,
+          "year": 2016
+        },
+        "end": {
+          "day": 1,
+          "month": 9,
+          "year": 2016
+        }
+      },
+      "title": "Node.js Developer",
+      "description": "Making a PDF generator",
+      "responsilibites": [
+        {
+          "type": "technical",
+          "description": "Responding to bugs"
+        }
+      ],
+      "skills": [
+        {
+          "name": "node.js",
+          "type": "programming",
+          "description": "Used node.js as a backend to build dynamic PDF from data sent to an express.js server.",
+          "integration": 5,
+          "proficentcy": 5
+        }
+      ]
+    }
+  ]
+}
